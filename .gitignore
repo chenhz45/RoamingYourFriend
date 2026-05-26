@@ -1,0 +1,23 @@
+# Build artifacts
+build/
+.build/
+*.o
+
+# PyInstaller artifacts
+PythonScripts/build/
+PythonScripts/dist/
+PythonScripts/*.spec
+
+# Python
+__pycache__/
+*.pyc
+
+# User data
+test_output/
+
+# IDE
+.idea/
+.vscode/
+
+# macOS
+.DS_Store
