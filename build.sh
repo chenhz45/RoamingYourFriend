@@ -63,5 +63,9 @@ cat > "$APP_BUNDLE/Contents/Info.plist" << 'PLIST'
 </plist>
 PLIST
 
+# Ad-hoc sign the binary and bundle (helps with local execution)
+echo "→ Signing..."
+codesign --sign - --force --deep "$APP_BUNDLE" 2>/dev/null || true
+
 echo "✓ Done: $APP_BUNDLE"
 echo "Run: open '$APP_BUNDLE'"

@@ -22,9 +22,15 @@ A macOS desktop pet app: turn a friend's photo into a talking pixel-art "Cockroa
 
 ### Option A: Download Pre-built App (zero setup)
 
-Download `RoamingYourFriend.app.zip` from [GitHub Releases](../../releases), unzip, and run. No Python or dependencies needed.
+1. Download `RoamingYourFriend.app.zip` from [GitHub Releases](../../releases) and unzip
+2. **Remove quarantine flag** (macOS blocks unsigned downloads):
+   ```bash
+   xattr -cr ~/Downloads/RoamingYourFriend.app
+   ```
+3. Open the app
+4. Grant Accessibility permission in **System Settings → Privacy & Security → Accessibility**
 
-First launch: grant Accessibility permission in **System Settings → Privacy & Security → Accessibility**.
+> If you still see a "damaged" warning, right-click (Control-click) the app → Open → Open.
 
 ### Option B: Build from Source
 
